@@ -1,0 +1,10 @@
+---
+- name: "Playbook to install software"
+  hosts: localhost
+  become: true
+  vars:
+      packages: wget
+  tasks:
+  - name: "Install Software"
+    yum: state=present name="{{packages | regex_replace(',')}}"
+    ignore_errors: yes
