@@ -14,5 +14,6 @@
 
   - name: "Install Software"
     yum: state=present name="{{packages | regex_replace(',')}}"
+    environment: 
+      http_proxy: http://theproxy.com
     ignore_errors: yes
-
