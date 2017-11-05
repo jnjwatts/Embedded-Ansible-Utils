@@ -4,6 +4,8 @@
   become: true
   vars:
       packages: wget
+      rhn_user: rhnuserid
+      rhn_user_password: somepass
   tasks:
   - name: "Subscribe the VM with a specific Pool ID"
     redhat_subscription:
