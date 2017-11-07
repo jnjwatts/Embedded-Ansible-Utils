@@ -15,7 +15,7 @@
       #      pool_ids: 0123456789abcdef0123456789abcdef
 
   - name: "Install Software"
-    yum: state=present name="{{packages | regex_replace(',')}}"
+    yum: state=present name="{{packages}}"
     #    environment: 
     #      http_proxy: http://theproxy.com:3128
     #      ignore_errors: yes
